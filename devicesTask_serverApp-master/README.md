@@ -21,22 +21,22 @@ Base url: `http://localhost:3000`
 
 
 ```bash
-GET /devices
+GET /books
 ```
 
 
 ```bash
-GET /devices/:id
+GET /books/:id
 ```
 
 
 ```bash
-DELETE /devices/:id
+DELETE /books/:id
 ```
 
 
 ```bash
-POST /devices
+POST /book
 ```
 > |  Request Body                                                           | content-type          |
 > |:------------------------------------------------------------------------|:----------------------|
@@ -44,7 +44,7 @@ POST /devices
 
 
 ```bash
-PUT /devices/:id
+PUT /books/:id
 ```
 > |  Request Body                                                            | content-type          |
 > |:-------------------------------------------------------------------------|:----------------------|
