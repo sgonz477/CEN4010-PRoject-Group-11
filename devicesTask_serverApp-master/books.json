@@ -1,74 +1,118 @@
 [
   {
-    "id": "e8okoP2l5",
-    "system_name": "DESKTOP-SMART",
-    "type": "WINDOWS",
-    "hdd_capacity": "10"
+    "book_id": "B001",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "rating": 4.5,
+    "isbn": "978-0446310789",
+    "copies_sold": 40000000,
+    "price": 8.99,
+    "publisher": "Grand Central Publishing",
+    "year_published": 1960,
+    "description": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize, and has become a classic of modern American literature."
   },
   {
-    "id": "Th3ngERn9",
-    "system_name": "MAC-LEADER",
-    "type": "MAC",
-    "hdd_capacity": "2048"
+    "book_id": "B002",
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Fiction",
+    "rating": 4.3,
+    "isbn": "978-0451524935",
+    "copies_sold": 30000000,
+    "price": 9.99,
+    "publisher": "Signet Classic",
+    "year_published": 1949,
+    "description": "1984 is a dystopian novel by George Orwell published in 1949. It is set in a totalitarian society and is a critique of government power and the loss of individual freedoms."
   },
   {
-    "id": "Q1JdBnE12",
-    "system_name": "ARMANDO",
-    "type": "WINDOWS",
-    "hdd_capacity": "256"
+    "book_id": "B003",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Fiction",
+    "rating": 4.2,
+    "isbn": "978-0743273565",
+    "copies_sold": 15000000,
+    "price": 10.99,
+    "publisher": "Scribner",
+    "year_published": 1925,
+    "description": "The Great Gatsby is a novel by F. Scott Fitzgerald published in 1925. It is set in the Jazz Age and is a criticism of the American Dream and the excesses of the wealthy."
   },
   {
-    "id": "e7ocoQ2n3",
-    "system_name": "MIGUEL-PC",
-    "type": "WINDOWS",
-    "hdd_capacity": "500"
+    "book_id": "B004",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Fiction",
+    "rating": 4.7,
+    "isbn": "978-0486284736",
+    "copies_sold": 20000000,
+    "price": 7.99,
+    "publisher": "Dover Publications",
+    "year_published": 1813,
+    "description": "Pride and Prejudice is a novel by Jane Austen published in 1813. It is a romantic comedy of manners set in rural England and is a critique of social class and the constraints on women in the late 18th century."
   },
   {
-    "id": "Jj5bn3G2H",
-    "system_name": "FIRST-MAC",
-    "type": "MAC",
-    "hdd_capacity": "180"
+    "book_id": "B005",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "rating": 4.1,
+    "isbn": "978-0316769488",
+    "copies_sold": 6500000,
+    "price": 12.99,
+    "publisher": "Back Bay Books",
+    "year_published": 1951,
+    "description": "The Catcher in the Rye is a novel by J.D. Salinger published in 1951. It is a coming-of-age story of a teenage boy and is a critique
+  {
+    "book_id": "B006",
+    "title": "The Nightingale",
+    "author": "Kristin Hannah",
+    "genre": "Fiction",
+    "rating": 4.6,
+    "isbn": "978-0312577223",
+    "copies_sold": 4000000,
+    "price": 12.99,
+    "publisher": "St. Martin's Press",
+    "year_published": 2015,
+    "description": "The Nightingale is a historical fiction novel by Kristin Hannah published in 2015. It is set in France during World War II and tells the story of two sisters and their experiences during the war."
   },
   {
-    "id": "GT556QGnk",
-    "system_name": "GOOD-MAC",
-    "type": "MAC",
-    "hdd_capacity": "500"
+    "book_id": "B007",
+    "title": "The Immortal Life of Henrietta Lacks",
+    "author": "Rebecca Skloot",
+    "genre": "Non-fiction",
+    "rating": 4.3,
+    "isbn": "978-1400052189",
+    "copies_sold": 2500000,
+    "price": 9.99,
+    "publisher": "Broadway Books",
+    "year_published": 2010,
+    "description": "The Immortal Life of Henrietta Lacks is a non-fiction book by Rebecca Skloot published in 2010. It tells the story of Henrietta Lacks, an African American woman whose cancer cells were used without her knowledge for medical research and became the first immortal human cell line."
   },
   {
-    "id": "ppRmcE9p8",
-    "system_name": "JACK-GUEST",
-    "type": "LINUX",
-    "hdd_capacity": "302"
+    "book_id": "B008",
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "genre": "Fantasy",
+    "rating": 4.5,
+    "isbn": "978-0553593716",
+    "copies_sold": 15000000,
+    "price": 8.99,
+    "publisher": "Bantam",
+    "year_published": 1996,
+    "description": "A Game of Thrones is a fantasy novel by George R.R. Martin published in 1996. It is the first book in the A Song of Ice and Fire series and is set in a fictional world inspired by medieval Europe, with multiple interwoven plotlines and a large cast of characters."
   },
   {
-    "id": "R5LdSnQhY",
-    "system_name": "HOME-ONE",
-    "type": "WINDOWS",
-    "hdd_capacity": "50"
+    "book_id": "B009",
+    "title": "The Power of Habit",
+    "author": "Charles Duhigg",
+    "genre": "Non-fiction",
+    "rating": 4.4,
+    "isbn": "978-0812981605",
+    "copies_sold": 2000000,
+    "price": 10.99,
+    "publisher": "Random House",
+    "year_published": 2012,
+    "description": "The Power of Habit is a non-fiction book by Charles Duhigg published in 2012. It explores the science of habit formation and offers strategies for changing habits and achieving personal and professional success."
   },
-  {
-    "id": "ab1coL2n9",
-    "system_name": "GILBERT-COMPUTER",
-    "type": "WINDOWS",
-    "hdd_capacity": "750"
-  },
-  {
-    "id": "LM5dBnJ2G",
-    "system_name": "MOON-SMART",
-    "type": "WINDOWS",
-    "hdd_capacity": "256"
-  },
-  {
-    "id": "Up5bcEQp4",
-    "system_name": "JULIO-MAC-LOCAL",
-    "type": "MAC",
-    "hdd_capacity": "512"
-  },
-  {
-    "id": "Up5ncErp8",
-    "system_name": "RYANN-HOST",
-    "type": "LINUX",
-    "hdd_capacity": "220"
-  }
-]
+  ]
