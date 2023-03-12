@@ -1,2 +1,27 @@
-Hello World!
-Helloooooo world :)
+import java.util.List;
+
+public class User {
+    private int userId;
+    private List<Book> bookList;
+    
+    public User(int userId, List<Book> bookList) {
+        this.userId = userId;
+        this.bookList = bookList;
+    }
+    
+    public int getUserId() {
+        return userId;
+    }
+    
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+    
+    public List<Book> getBookList() {
+        return bookList;
+    }
+    
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
+    }
+}
