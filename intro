@@ -1,2 +1,42 @@
-Hello World!
-Helloooooo world :)
+
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args)
+    {
+        createBook(0,  "helloworld", "helloworld",0,
+                "helloworld", "helloworld","helloworld",0,0);
+
+    }
+
+    public static void createBook (int isbn,String bookName,
+                                   String bookDescription, int price,
+                                   String author, String genre,
+                                   String publisher,
+                                   int yearPublished, int copiesSold){
+        Scanner userInp = new Scanner(System.in);
+        System.out.println(" Please enter the isbn of the book you want to create:" + isbn);
+        isbn=  userInp.nextInt();
+        System.out.println(" Please enter the name of the book you want to create:" + bookName);
+        bookName = userInp.next();
+        System.out.println(" Please enter the description of the book you want to create:" + bookDescription);
+        bookDescription = userInp.next();
+        System.out.println(" Please enter the price of the book you want to create:" + price);
+        price = userInp.nextInt();
+        System.out.println(" Please enter the author of the book you want to create:" + author);
+        author = userInp.next();
+        System.out.println(" Please enter the genre of the book you want to create:" + genre);
+        genre = userInp.next();
+        System.out.println(" Please enter the publisher of the book you want to create:" + publisher);
+        publisher = userInp.next();
+        System.out.println(" Please enter the year the book was poblished:" + yearPublished);
+        yearPublished = userInp.nextInt();
+        System.out.println(" Please enter the number of copies the book sold:" + copiesSold);
+        copiesSold = userInp.nextInt();
+
+    }
+}
+
+

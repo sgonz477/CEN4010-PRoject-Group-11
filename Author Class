@@ -1,0 +1,79 @@
+package BookDetailsPck;
+
+import java.util.Scanner;
+
+public class Author {
+    public int id;
+    public String firstName;
+    public String lastName;
+    public String biography;
+    public String publisher;
+
+    public Author(String firstName, String lastName, String biography, String publisher) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.biography = biography;
+        this.publisher = publisher;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getBiography() {
+        return biography;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public static void retrieveBooksByAuthor() {
+    }
+
+    public static void createAuthor(String firstName, String lastName, String biography, String publisher) {
+        Author newAuthor = new Author(firstName, lastName, biography, publisher);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first name of the author: " + firstName);
+        firstName = scanner.nextLine();
+        System.out.println("Enter the last name of the author: " + lastName);
+        lastName = scanner.nextLine();
+        System.out.println("Enter the biography: " + biography);
+        biography = scanner.nextLine();
+        System.out.println("Enter the publisher: " + publisher);
+        publisher = scanner.next();
+        System.out.println("You have created new author: " + newAuthor);
+        ;
+
+    }
+    }
+
+
