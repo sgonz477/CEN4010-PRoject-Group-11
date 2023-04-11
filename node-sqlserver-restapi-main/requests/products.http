@@ -1,34 +1,65 @@
 @api = http://localhost:3000/api/books
+@apiID = http://localhost:3000/api/calculateCartTotal
+@cartApi = http://localhost:3000/api/shoppingCart 
 
-GET http://localhost:3000/api/books
+GET {{api}}
 
-{{api}}
-
-### add a product
-POST http://localhost:3000/api/products
+###
+POST {{api}}
 Content-Type: application/json
 
 {
-    "name": "product 2",
-   "description": "some product",
-   "quantity": 10
+    "id": "B006", 
+    "title": "fdbdgbgbgb",
+    "author": "fghyjytj",
+    "genre": "fghjyj",
+    "avRating": 4.5,
+    "ISBN": "978-0446310589",
+    "copiesSold": 40000000,
+    "price": 8.99,
+    "publisher": "Grand Central Publishing",
+    "yearPublished": 1960,
+    "description": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize, and has become a classic of modern American literature."
+}
+###
+DELETE {{apiID}}
+Content-Type: application/json
+{
+    "id": "B001"
 }
 
-### get product
-{{api}}/10
-
-### delete product 
-DELETE {{api}}/10
-
-### get count
-{{api}}/count
-
-### update
-PUT {{api}}/11
+###
+POST {{cartApi}}
 Content-Type: application/json
 
 {
-    "name": "laptop",
-    "description": "some laptop",
-    "quantity": 20
+     "userId": 5,
+     "bookList": "B004"
+}
+
+
+###
+DELETE {{cartApi}}
+Content-Type: application/json
+
+{
+    "userId": 4,
+    "bookId": "B006"
+
+}
+
+###
+GET {{cartApi}}
+Content-Type: application/json
+
+{
+    "userId": 2
+}
+
+###
+GET {{apiID}}
+Content-Type: application/json
+
+{
+    "userId": 4
 }

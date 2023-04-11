@@ -1,9 +1,6 @@
-# Node & MSSQL Server API
-nodejs and Microsoft SQL Server Datbase REST API
+# Getting the Node MOdules
+npm install
 
-## environment variables
+## Run
+npm run dev
 
-DB_USER = youruser
-DB_PASSWORD = yourpassword
-DB_SERVER = localhost
-DB_DATABASE = yourdatabase

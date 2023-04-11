@@ -2,24 +2,29 @@ import { Router } from "express";
 import {
   getBooks,
   createNewBook,
-  getBookById,
+  calculateCartTotal,
   deleteBookById,
-  getTotalBooks,
-  updateBookById,
-} from "../controllers/books";
+  getBookListByUserID,
+  createNewCart,
+  deleteShoppingCartItem
+} from "../controllers/books.js";
 
 const router = Router();
+
+router.delete("/shoppingCart", deleteShoppingCartItem);
+
+router.post("/shoppingCart", createNewCart);
+
+router.get("/shoppingCart", getBookListByUserID);
+
+router.get("/calculateCartTotal", calculateCartTotal);
 
 router.get("/books", getBooks);
 
 router.post("/books",   createNewBook);
 
-router.get("/books/count", getBookById);
+router.delete("/books/:id", deleteBookById);
 
-router.get("/books/:id", deleteBookById);
 
-router.delete("/books/:id", getTotalBooks);
-
-router.put("/books/:id", updateBookById);
 
 export default router;

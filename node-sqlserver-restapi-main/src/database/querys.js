@@ -1,10 +1,13 @@
 export const querys = {
-  getAllBooks: "SELECT TOP(500) * FROM [book_data].[dbo].[bookBase]",
-  getBookById: "SELECT * FROM bookBase Where Id = @Id",
+  getAllBooks: "SELECT  * FROM bookdata",
+  getBookById: "SELECT * FROM bookdata Where `Id` = ?, [id]",
   addNewBook:
-    "INSERT INTO [book_data].[dbo].[bookBase] (id, title, author, genre, avRating , ISBN, copiesSold, price, publisher, yearPublised, description) VALUES (@id, @title, @author, @genre, @avRating , @ISBN, @copiesSold, @price, @publisher, @yearPublised, @description);",
-  deleteBook: "DELETE FROM [book_data].[dbo].[bookBase] WHERE Id= @Id",
-  getTotalBooks: "SELECT COUNT(*) FROM book_data.dbo.bookBase",
-  updateBookById:
-    "UPDATE [book_data].[dbo].[bookBase] SET id = @id, title = @title, author = @author, genre = @genre, avRating= @avRating, ISBN= @ISBN, copiesSold= @copiesSold, price= @price, publisher= @publisher, description= @description    WHERE Id = @id",
+    "INSERT INTO [bookBase].[dbo].[bookdata]  (`id` = ?, `title`=?, `author`=?, `genre`=?, `avRating`=? , `ISBN`=?, `copiesSold`=?, `price`=?, `publisher`=?, `yearPublised`=?, `description`=?), [id title, author, genre, avRating , ISBN, copiesSold, price, publisher, yearPublised, description];",
+  deleteBook: "DELETE FROM [bookBase].[dbo].[bookdata] WHERE Id= @Id",
+  getTotalBooks: "SELECT COUNT(*) FROM bookBase.dbo.bookdata",
+  getBookListByUserID: "SELECT * FROM shoppingCart Where `Id` = ?, [id]",
+  postNewCart:
+    "INSERT INTO [shoppingCart].[dbo].[bookdata] (`userId` = ?, `bookIdList`=?),[userId, bookIdList]",
+  deleteShoppingCartItem:
+    "UPDATE shoppingCart SET bookIdList = JSON_REMOVE((bookIdList, '$[?]') WHERE `userId` = ?), [bookListIndex, userId]",
 };

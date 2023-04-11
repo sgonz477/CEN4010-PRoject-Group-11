@@ -6,5 +6,5 @@ export default {
   dbUser: process.env.DB_USER || "root",
   dbPassword: process.env.DB_PASSWORD || "Ktglez02",
   dbServer: process.env.DB_SERVER || "localhost",
-  dbDatabase: process.env.DB_DATABASE || "book_data",
+  dbDatabase: process.env.DB_DATABASE || "bookBase",
 };

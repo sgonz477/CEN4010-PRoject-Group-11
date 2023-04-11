@@ -6,7 +6,7 @@
 -- GET THE LAST INSERT ID
 -- SELECT SCOPE_IDENTITY()
 
-SELECT COUNT(*) FROM book_data.dbo.bookBase;
+SELECT COUNT(*) FROM bookBase.dbo.bookdata;
 
  -- CREATE DATABASE webstore;
 
