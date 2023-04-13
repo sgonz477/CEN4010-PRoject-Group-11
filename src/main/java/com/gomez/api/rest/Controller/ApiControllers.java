@@ -2,14 +2,11 @@ package com.gomez.api.rest.Controller;
 
 import com.gomez.api.rest.Model.Book;
 import com.gomez.api.rest.Repo.BookRepo;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
-
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-
 import java.util.List;
+
 
 @RestController
 public class ApiControllers {
@@ -18,14 +15,7 @@ public class ApiControllers {
     private BookRepo bookRepo;
 
 
-
-    //prints welcome page
-    @GetMapping(value = "/")
-    public String getPage() {
-        return "Welcome";
-    }
-
-    //retrieves list of all the books
+    //GET METHOD RETRIEVES LIST OF ALL BOOKS
     @GetMapping(value = "/books")
     public List<Book> getBooks() {
         return bookRepo.findAll();
@@ -33,51 +23,75 @@ public class ApiControllers {
 
 
 
-    // retrieves list of top 10 books by most copies sold
+    //GET METHOD RETRIEVES LIST OF BOOKS BY GENRE
+    @GetMapping(value ="/books/{genre}")
+    public ResponseEntity<List<Book>> getBooksByGenre(@PathVariable String genre) {
+        List<Book> books = bookRepo.findByGenre(genre);
+
+        if (books.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(books);
+        }
+    }
+
+
+    //GET METHOD RETRIEVES LIST OF TOP 10 BOOKS BY MOST COPIES SOLD
         @GetMapping("/books/top10")
         public List<Book> getTop10BooksByCopiesSold() {
             return bookRepo.findTop10ByOrderByCopiesSoldDesc();
         }
 
-        
 
 
-    //retrieves list of books by genre
-    @GetMapping(value = "/books/{genre}")
-    public Book getBooksbyGenre(@PathVariable("genre") String genre) {
-        return bookRepo.getBooksByGenre(genre);
+    //GET METHOD RETRIEVES LIST OF BOOKS FOR A PARTICULAR RATING AND HIGHER
+    @GetMapping("/books/rating/{rating}")
+    public ResponseEntity<List<Book>> getBooksByRating(@PathVariable int rating) {
+        List<Book> books = bookRepo.findByRatingGreaterThanEqual(rating);
+
+        if (books.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(books);
+        }
     }
 
 
+    //list of books by publisher
+        @GetMapping("/publisher/{publisher}")
+        public ResponseEntity<List<Book>> getBooksByPublisher(@PathVariable String publisher) {
+            List<Book> books = bookRepo.findByPublisher(publisher);
 
-/*
-    //saves a new book to data
-    @PostMapping(value = "/save")
-    public String saveBook(@RequestBody Book book) {
-        bookRepo.save(book);
-        return "Saved...";
+            if (books.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            } else {
+                return ResponseEntity.ok(books);
+            }
+        }
+
+
+    //PUT METHOD UPDATES THE PRICE OF ALL BOOKS UNDER A PUBLISHER BY A DISCOUNT PERCENT
+        @PutMapping("/publisher/{publisher}/discount/{discount}")
+        public ResponseEntity<Void> updatePriceByPublisher(@PathVariable String publisher, @PathVariable float discount) {
+            List<Book> books = bookRepo.findByPublisher(publisher);
+
+            if (books.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+
+            for (Book book : books) {
+                float originalPrice = book.getPrice();
+                float discountedPrice = originalPrice * (1 - (discount / 100));
+                book.setPrice(discountedPrice);
+            }
+
+            bookRepo.saveAll(books);
+
+            return ResponseEntity.ok().build();
+        }
+
     }
 
- */
 
-
-    //updates books
-    @PutMapping(value = "update/{publisher}")
-    public String updateBook(@PathVariable long id, @RequestBody Book book) {
-        Book updatedBook = bookRepo.findById(id).get();
-        updatedBook.setTitle(book.getTitle());
-        updatedBook.setAuthorName(book.getAuthorName());
-        updatedBook.setGenre(book.getGenre());
-        updatedBook.setRating(book.getRating());
-        updatedBook.setCopiesSold(book.getCopiesSold());
-        updatedBook.setPrice(book.getPrice());
-        updatedBook.setPublisher(book.getPublisher());
-        return "Updated...";
-    }
-
-
-
-        
-    }
 
 

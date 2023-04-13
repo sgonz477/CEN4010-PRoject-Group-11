@@ -2,9 +2,6 @@ package com.gomez.api.rest.Model;
 
 import jakarta.persistence.*;
 
-import java.util.Objects;
-
-
 @Entity
 public class Book {
 
@@ -95,40 +92,6 @@ public class Book {
 
     public void setPublisher(String publisher) {
         this.publisher = publisher;
-    }
-
-
-
-
-
-
-
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", authorName='" + authorName + '\'' +
-                ", genre='" + genre + '\'' +
-                ", rating=" + rating +
-                ", copiesSold=" + copiesSold +
-                ", price=" + price +
-                ", publisher='" + publisher + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return id == book.id && rating == book.rating && copiesSold == book.copiesSold && Float.compare(book.price, price) == 0 && title.equals(book.title) && authorName.equals(book.authorName) && genre.equals(book.genre) && publisher.equals(book.publisher);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, authorName, genre, rating, copiesSold, price, publisher);
     }
 
 
