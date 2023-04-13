@@ -70,7 +70,6 @@ public class ApiControllers {
         }
 
 
-
     //PUT METHOD UPDATES THE PRICE OF ALL BOOKS UNDER A PUBLISHER BY A DISCOUNT PERCENT
         @PutMapping("/publisher/{publisher}/discount/{discount}")
         public ResponseEntity<Void> updatePriceByPublisher(@PathVariable String publisher, @PathVariable float discount) {

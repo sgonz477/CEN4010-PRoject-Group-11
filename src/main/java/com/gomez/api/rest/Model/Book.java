@@ -2,8 +2,6 @@ package com.gomez.api.rest.Model;
 
 import jakarta.persistence.*;
 
-
-
 @Entity
 public class Book {
 
